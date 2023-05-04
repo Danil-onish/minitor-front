@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Climate monitor</title>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      // REPLACE WITH YOUR web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBXTS6HzqhXZqtkL0xMmu1veZu7zI5gmaA",
+        authDomain: "climate-mon.firebaseapp.com",
+        databaseURL:
+          "https://climate-mon-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "climate-mon",
+        storageBucket: "climate-mon.appspot.com",
+        messagingSenderId: "119585384537",
+        appId: "1:119585384537:web:907dd2dd28abb2873da948",
+        measurementId: "G-QJGGB76SY2",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      var database = firebase.database();
+    </script>
+    <!-- <script src="https://unpkg.com/gojs@2.3.5/release/go.js"></script> -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <p>Current temperature: <span id="reading-temp"></span></p>
+    <p>Current humidity: <span id="reading-hum"></span></p>
+    <div>
+      <div class="graph-settings"></div>
+      <canvas id="myChart"></canvas>
+    </div>
+  </body>
+</html>
