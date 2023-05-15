@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(233, 255, 253, 0.829);
+}
+
+.data-table-wrapper {
+  max-height: 502px;
+  max-width: 300px;
+  overflow: auto;
+}
+
+.myChart-wrapper {
+  max-width: 850px;
+  min-width: 350px;
+}
+
+@media screen and (min-width: 1140px) {
+  .statistics-group-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .myChart-wrapper {
+    max-width: 850px;
+    min-width: 950px;
+  }
+}
+.data-table-wrapper,
+.myChart-wrapper {
+  padding: 10px;
+}
+
+.statistics-wrapper {
+  border: solid teal 2px;
+}
+.statistics-wrapper .date-range-select-wrapper {
+  padding-left: 10px;
+  padding-top: 10px;
+}/*# sourceMappingURL=style.css.map */

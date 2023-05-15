@@ -28,13 +28,32 @@
     </script>
     <!-- <script src="https://unpkg.com/gojs@2.3.5/release/go.js"></script> -->
     <script src="app.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <p>Current temperature: <span id="reading-temp"></span></p>
     <p>Current humidity: <span id="reading-hum"></span></p>
-    <div>
-      <div class="graph-settings"></div>
-      <canvas id="myChart"></canvas>
+
+    <div class="statistics-wrapper">
+      <div class="date-range-select-wrapper" >
+        <select name="date-range" id="date-range-select">
+          <option value="hour">Last hour</option>
+          <option value="day">Last day</option>
+          <option value="week">Last week</option>
+          <option value="full">Full</option>
+        </select>
+      </div>
+
+      <div class="statistics-group-wrapper">
+        <div class="myChart-wrapper">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class="data-table-wrapper">
+          <table id="data-table" style="text-align: center"></table>
+        </div>
+      </div>
+
     </div>
+
   </body>
 </html>
